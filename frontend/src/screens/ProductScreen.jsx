@@ -21,6 +21,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
 import { addToCart } from '../slices/cartSlice';
+import CustomModal from '../components/CustomModal';
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -156,6 +157,7 @@ const ProductScreen = () => {
                   </ListGroup.Item>
                 </ListGroup>
               </Card>
+              
             </Col>
           </Row>
           <Row className='review'>

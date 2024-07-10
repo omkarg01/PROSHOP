@@ -12,6 +12,7 @@ import {
   useGetPaypalClientIdQuery,
   usePayOrderMutation,
 } from '../slices/ordersApiSlice';
+import CustomModal from '../components/CustomModal';
 
 const OrderScreen = () => {
   const { id: orderId } = useParams();
@@ -211,6 +212,7 @@ const OrderScreen = () => {
                   <Col>${order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
+
               {!order.isPaid && (
                 <ListGroup.Item>
                   {loadingPay && <Loader />}
@@ -256,6 +258,9 @@ const OrderScreen = () => {
                   </ListGroup.Item>
                 )}
             </ListGroup>
+          </Card>
+          <Card className='mt-2'>
+            <CustomModal />
           </Card>
         </Col>
       </Row>

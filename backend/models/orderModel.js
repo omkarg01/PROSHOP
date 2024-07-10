@@ -1,5 +1,17 @@
 import mongoose from 'mongoose';
 
+const reportSchema = mongoose.Schema(
+  {
+    title: { type: String, required: true },
+    comment: { type: String, required: true },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: 'User',
+    },
+  }
+);
+
 const orderSchema = mongoose.Schema(
   {
     user: {
@@ -72,6 +84,7 @@ const orderSchema = mongoose.Schema(
     deliveredAt: {
       type: Date,
     },
+    report: reportSchema
   },
   {
     timestamps: true,
