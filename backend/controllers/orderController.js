@@ -146,8 +146,9 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
 const reportOrder = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
 
-  // console.log("hello");
+  console.log("hello");
   const { title, comment } = req.body;
+  console.log(req.body);
 
   if (order) {
     // order.isDelivered = true;
