@@ -1,4 +1,5 @@
 {
+  "author": "Omkar Gujja",
   "name": "proshop2",
   "version": "2.0.0",
   "type": "module",
@@ -14,8 +15,6 @@
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "generate-toc": "markdown-toc -i readme.md"
   },
-  "author": "Brad Traversy",
-  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
